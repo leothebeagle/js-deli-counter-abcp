@@ -21,5 +21,5 @@ function currentLine(customers) {
     for(let i = 0, x = customers.length; i < x; i++) {
       numbersAndNames.push(`${i + 1}. ${customers[i]}`)
     }
-    return `The line is currently: ${numbersAndNames.join(',')}`
+    return `The line is currently: ${numbersAndNames.join(', ')}`
   }
