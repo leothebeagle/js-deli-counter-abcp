@@ -23,4 +23,3 @@ function currentLine(customers) {
     }
     return `The line is currently: ${numbersAndNames.join(',')}`
   }
-}
