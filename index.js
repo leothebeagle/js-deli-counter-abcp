@@ -16,7 +16,7 @@ function nowServing(customers) {
 function currentLine(customers) {
   if(customers == 0) {
     return "The line is currently empty."
-  } 
+  }
   let numbersAndNames = []
     for(let i = 0, x = customers.length; i < x; i++) {
       numbersAndNames.push(`${i + 1}. ${customers[i]}`)
