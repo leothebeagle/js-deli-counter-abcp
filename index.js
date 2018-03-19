@@ -1,27 +1,25 @@
-var katzDeliLine = [];
+let customers = [];
 
-function takeANumber(katzDeliLine, name) {
-  katzDeliLine.push(name);
-  return `Welcome, ${name}. You are number ${katzDeliLine.length} in line.`;
+function takeANumber(customers, name) {
+  customers.push(name);
+  return `Welcome, ${name}. You are number ${customers.length} in line.`
 }
 
-function nowServing(katzDeliLine) {
-if (katzDeliLine.length == 0){
-  return "There is nobody waiting to be served!";
-} else {
-  return `Currently serving ${katzDeliLine.shift()}.`;
-}
-}
-
-function currentLine(katzDeliLine) {
-if (katzDeliLine.length == 0){
-  return "The line is currently empty.";
-} else {
-  let line = []
-  let x = katzDeliLine.length
-  for (let i = 0; i < x; i++) {
-    line.push(`${i+1}. ${katzDeliLine[i]}`)
+function nowServing(customers) {
+  if (customers.length == 0){
+    return "There is nobody waiting to be served!";
+  } else {
+    return `Currently serving ${customers.shift()}.`
   }
-  return `The line is currently: ${line.join(', ')}`
 }
-}
+
+function currentLine(customers) {
+  if(customers == 0) {
+    return "The line is currently empty."
+  }
+  let numbersAndNames = []
+    for(let i = 0, x = customers.length; i < x; i++) {
+      numbersAndNames.push(`${i + 1}. ${customers[i]}`)
+    }
+    return `The line is currently: ${numbersAndNames.join(', ')}`
+  }
